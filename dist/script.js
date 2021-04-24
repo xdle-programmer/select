@@ -165,7 +165,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       key: "close",
       value: function close() {
         this.$customSelect.classList.remove(this.openClass);
-      }
+      } // TODO: Сделать рефреш
+
     }]);
 
     return Select;
@@ -222,7 +223,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             classDisabled = this.disabledItemClass;
           }
 
-          list += "<div data-select-index=\"".concat(item.index, "\" data-select-type=\"value\" class=\"custom-select__item ").concat(classDisabled, "\">").concat(item.name, "</div>");
+          list += "<div data-select-index=\"".concat(item.index, "\" data-select-type=\"value\" class=\"").concat(this.customSelectClass, "__item ").concat(classDisabled, "\">").concat(item.name, "</div>");
         }
       }
     } catch (err) {

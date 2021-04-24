@@ -87,7 +87,7 @@
                         classDisabled = this.disabledItemClass;
                     }
 
-                    list += `<div data-select-index="${item.index}" data-select-type="value" class="custom-select__item ${classDisabled}">${item.name}</div>`;
+                    list += `<div data-select-index="${item.index}" data-select-type="value" class="${this.customSelectClass}__item ${classDisabled}">${item.name}</div>`;
                 }
             }
 
@@ -194,6 +194,7 @@
             this.$customSelect.classList.remove(this.openClass);
         }
 
+        // TODO: Сделать рефреш
     }
 
     return Select;
